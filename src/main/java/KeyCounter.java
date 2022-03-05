@@ -42,7 +42,11 @@ public class KeyCounter {
 
             }
         });
-
+        button1.addActionListener(e -> {
+                        field2.setText(counter + "");
+                        counter = 0;
+                }
+        );
 
         frame.pack();
 
