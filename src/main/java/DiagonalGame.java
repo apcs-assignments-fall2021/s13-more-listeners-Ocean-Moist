@@ -18,6 +18,7 @@ public class DiagonalGame {
     JFrame frame;
     JPanel panel1;
     JTextField field1;
+    int firstClick, secondClick;
 
     public DiagonalGame() {
         // Set up the frame
@@ -30,18 +31,22 @@ public class DiagonalGame {
         frame.add(panel1, BorderLayout.NORTH);
 
         field1 = new JTextField();
+        field1.setEditable(false);
         frame.add(field1, BorderLayout.SOUTH);
 
         // Set up MouseListener
         panel1.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
 
+                int ans = y-x;
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
-
+                int d
             }
 
             @Override

@@ -22,6 +22,16 @@ public class SudokuButton extends JButton implements KeyListener {
         // To interact with the current SudokuButton, use: this
         // For instance, if we wanted to get the text of the
         // current button, we'd say: this.getText()
+
+        int keyCode = e.getKeyCode();
+
+        if (keyCode >= '0' && keyCode <= '9') {
+            this.setText(Character.toString((char) keyCode));
+        }
+
+        if (keyCode == VK_BACK_SPACE) {
+            this.setText("");
+        }
     }
 
     // when the key goes up
